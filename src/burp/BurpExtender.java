@@ -26,7 +26,7 @@ public class BurpExtender implements IBurpExtender, IScannerCheck
         this.callbacks = callbacks;
         helpers = callbacks.getHelpers();
         
-        callbacks.setExtensionName("Custom Scanner Checks");
+        callbacks.setExtensionName("JuiceShop-Routes");
         
         callbacks.registerScannerCheck(this);
     }
@@ -58,7 +58,7 @@ public class BurpExtender implements IBurpExtender, IScannerCheck
     {
         
         List<String> matches = new ArrayList<String>();
-        String startString = ".when(";
+        String startString = "e.when(";
         String endString = ",";
         
         int start = 0;
